@@ -15,14 +15,14 @@ const AddProfileCard = ({
   const [openModal, setOpenModal] = useState(false);
   const onSubmit = (newProfile: IProfile) => {
     console.log(newProfile)
-    setUserProfiles((prev) => [newProfile, ...prev]);
+    setUserProfiles((prev) => [ ...prev, newProfile]);
     setOpenModal(false);
   };
 
   
   return (
     <>
-      <div className="flex items-center justify-center py-4  w-80   bg-white border-2 rounded-2xl shadow-md  m-2 ml-0  h-40 sm:h-full max-h-72">
+      <div className="flex items-center justify-center py-4  w-80   bg-white border-2 rounded-2xl shadow-md  m-2 ml-0 h-56">
         <div
           onClick={() => setOpenModal(true)}
           className="cursor-pointer group flex flex-col gap-4"
